@@ -1,8 +1,8 @@
 {
   "name": "taskflow-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Görev ve Proje Yönetim Sistemi API Geliştirme Projesi",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
@@ -11,8 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/zeyneptass/Taskflow-Api.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "task-management",
+    "nodejs",
+    "express",
+    "rest-api"
+  ],
+  "author": "zeyneptass",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
