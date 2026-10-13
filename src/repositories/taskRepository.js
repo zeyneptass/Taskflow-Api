@@ -53,4 +53,63 @@ const writeData = (data) => {
   }
 };
 
-module.exports = { readData, writeData };
+const getAllTasks = () => {
+  return readData();
+};
+
+// id ile task bul
+const getTaskById = (id) => {
+  const tasks = readData();
+  return tasks.find((task) => task.id === id);
+};
+
+// Yeni task oluştur
+const createTask = (taskData) => {
+  const tasks = readData();
+  const newTask = {
+    id: Date.now().toString(),
+    title: taskData.title,
+    description: taskData.description || "",
+    completed: false,
+    createdAt: new Date().toISOString(),
+  };
+  tasks.push(newTask);
+  writeData(tasks);
+  return newTask;
+};
+
+// task güncelle
+const updateTask = (id, updatedData) => {
+  const tasks = readData();
+  const taskIndex = tasks.findIndex((task) => task.id === id);
+
+  if (taskIndex === -1) {
+    return null; // not found
+  }
+
+  tasks[taskIndex] = {
+    ...tasks[taskIndex],
+    title: updatedData.title !== undefined ? updatedData.title : tasks[taskIndex].title,
+    description: updatedData.description !== undefined ? updatedData.description : tasks[taskIndex].description,
+    completed: updatedData.completed !== undefined ? updatedData.completed : tasks[taskIndex].completed,
+    updatedAt: new Date().toISOString(),
+  };
+
+  writeData(tasks);
+  return tasks[taskIndex];
+};
+
+// task sil
+const deleteTask = (id) => {
+  const tasks = readData();
+  const index = tasks.findIndex((task) => task.id === id);
+
+  if (index === -1) return false;
+
+  tasks.splice(index, 1);
+  writeData(tasks);
+  return true;
+};
+
+
+module.exports = { readData, writeData, getAllTasks, getTaskById, createTask, updateTask, deleteTask };
