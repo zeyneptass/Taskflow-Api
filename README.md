@@ -8,7 +8,7 @@ Node.js ve Express.js ile geliştirilmiş; **Clean Code** ve **Katmanlı Mimari 
 
 Projenin sprint planlaması, görev dağılımı ve iş takibi (Scrum board) süreçleri şeffaf bir şekilde yönetilmektedir. Güncel sprint ve görev durumlarını aşağıdaki bağlantıdan canlı olarak takip edebilirsiniz:
 
-👉 **[Canlı Scrum Çizelgesi & Proje Takibi (Netlify)](https://proje-netlify-adresin.netlify.app)**
+👉 **[Canlı Scrum Çizelgesi & Proje Takibi (Netlify)](https://starlit-bunny-17b941.netlify.app/)**
 
 ---
 
