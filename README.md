@@ -82,7 +82,7 @@ npm run dev
 
 API uçlarını test etmek ve kendi ortamınıza aktarmak için hazırlanan Postman koleksiyonuna aşağıdaki bağlantıdan ulaşabilirsiniz:
 
-👉 **[Postman Workspace & Koleksiyonu Görüntüle](https://zeyneptass-3618409.postman.co/workspace/Zeynep-Ta%C5%9F's-Workspace~efdf2da3-cca1-46b5-8ebc-189f0d96754f/collection/58924504-4580be99-be39-4c57-b970-ead6795672e7?action=share&creator=58924504)**
+👉 **[Postman Workspace & Koleksiyonu Görüntüle](https://www.postman.com/zeyneptass-3618409/workspace/taskflow-public-workspace/collection/58924504-4580be99-be39-4c57-b970-ead6795672e7?action=share&creator=58924504)**
 
 ### Endpoint Listesi
 
