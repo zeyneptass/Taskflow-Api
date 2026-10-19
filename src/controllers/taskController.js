@@ -2,12 +2,14 @@ const taskRepository = require("../repositories/taskRepository");
 
 const getAllTasks = (req, res) => {
   try {
-    const { status } = req.query;
-    const tasks = taskRepository.getAllTasks();
+    const { status, sort } = req.query;
+    let tasks = taskRepository.getAllTasks();
+
+    // 1. Duruma Göre Filtreleme
     if (status !== undefined) {
       const isCompletedBool = status === "true";
 
-      const filteredTasks = tasks.filter((task) => {
+      tasks = tasks.filter((task) => {
         // Durum alanı boolean veya string olabilir, buna göre filtreleme yapılır
         if (typeof task.completed === "boolean") {
           return task.completed === isCompletedBool;
@@ -18,11 +20,16 @@ const getAllTasks = (req, res) => {
         }
         return false;
       });
+    }
 
-      return res.status(200).json({
-        success: true,
-        count: filteredTasks.length,
-        data: filteredTasks,
+    // 2. Sıralama
+    if (sort) {
+      tasks.sort((a, b) => {
+        if (a[sort] === undefined || b[sort] === undefined) return 0;
+
+        if (a[sort] < b[sort]) return -1;
+        if (a[sort] > b[sort]) return 1;
+        return 0;
       });
     }
 

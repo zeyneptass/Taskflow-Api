@@ -58,3 +58,5 @@
 [2026-10-19T12:35:11.090Z] GET - /api/tasks?status=true
 [2026-10-19T12:35:21.208Z] GET - /api/tasks?status=false
 [2026-10-19T12:36:29.893Z] GET - /api/tasks/search?keyword=dok%C3%BCmantasyon
+[2026-10-19T12:54:23.237Z] GET - /api/tasks?sort=createdAt
+[2026-10-19T12:56:13.711Z] GET - /api/tasks?sort=title
