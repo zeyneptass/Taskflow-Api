@@ -2,7 +2,7 @@ const taskRepository = require("../repositories/taskRepository");
 
 const getAllTasks = (req, res) => {
   try {
-    const { status, sort } = req.query;
+    const { status, sort, priority } = req.query;
     let tasks = taskRepository.getAllTasks();
 
     // 1. Duruma Göre Filtreleme
@@ -22,7 +22,16 @@ const getAllTasks = (req, res) => {
       });
     }
 
-    // 2. Sıralama
+    // 2. Önceliğe Göre Filtreleme (priority=high/medium/low)
+    if (priority) {
+      tasks = tasks.filter(
+        (task) =>
+          task.priority &&
+          task.priority.toLowerCase() === priority.toLowerCase(),
+      );
+    }
+
+    // 3. Sıralama
     if (sort) {
       tasks.sort((a, b) => {
         if (a[sort] === undefined || b[sort] === undefined) return 0;

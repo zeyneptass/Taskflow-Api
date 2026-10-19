@@ -28,5 +28,26 @@
     "description": "API uçları için Swagger entegrasyonu araştırılacak.",
     "completed": false,
     "createdAt": "2026-10-19T12:30:42.213Z"
+  },
+  {
+    "id": "1792415226844",
+    "title": "API Güvenlik Testleri",
+    "description": "JWT ve rate limiting testleri tamamlandı.",
+    "completed": false,
+    "createdAt": "2026-10-19T13:07:06.844Z"
+  },
+  {
+    "id": "1792415236232",
+    "title": "Loglama Mekanizması Kurulumu",
+    "description": "Winston kütüphanesi ile loglama entegrasyonu yapılacak.",
+    "completed": false,
+    "createdAt": "2026-10-19T13:07:16.232Z"
+  },
+  {
+    "id": "1792415243800",
+    "title": "Docker Konteynerizasyonu",
+    "description": "Proje Dockerfile yardımıyla paketlenecek.",
+    "completed": false,
+    "createdAt": "2026-10-19T13:07:23.800Z"
   }
 ]
