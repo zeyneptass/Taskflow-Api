@@ -2,7 +2,7 @@ const taskRepository = require("../repositories/taskRepository");
 
 const getAllTasks = (req, res) => {
   try {
-    const { status, sort, priority, assignee } = req.query;
+    const { status, sort, priority, assignee, page, limit } = req.query;
     let tasks = taskRepository.getAllTasks();
 
     // 1. Duruma Göre Filtreleme
@@ -48,6 +48,30 @@ const getAllTasks = (req, res) => {
         if (a[sort] < b[sort]) return -1;
         if (a[sort] > b[sort]) return 1;
         return 0;
+      });
+    }
+
+    // 5. Pagination (page=1&limit=2 vb.)
+    const totalTasksCount = tasks.length;
+    let paginatedTasks = tasks;
+
+    if (page || limit) {
+      const pageNum = parseInt(page, 10) || 1;
+      const limitNum = parseInt(limit, 10) || 10;
+
+      const startIndex = (pageNum - 1) * limitNum;
+      const endIndex = pageNum * limitNum;
+
+      paginatedTasks = tasks.slice(startIndex, endIndex);
+
+      return res.status(200).json({
+        success: true,
+        currentPage: pageNum,
+        limit: limitNum,
+        totalTasks: totalTasksCount,
+        totalPages: Math.ceil(totalTasksCount / limitNum),
+        count: paginatedTasks.length,
+        data: paginatedTasks,
       });
     }
 

@@ -81,3 +81,4 @@
 [2026-10-19T13:17:17.112Z] GET - /api/tasks?priority=high&status=true&sort=title
 [2026-10-19T13:17:33.914Z] GET - /api/tasks?assignee=Zeynep
 [2026-10-19T13:18:17.556Z] GET - /api/tasks?assignee=Zeynep&priority=high&sort=title
+[2026-10-19T13:22:31.905Z] GET - /api/tasks?page=1&limit=2
