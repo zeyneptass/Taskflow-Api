@@ -49,5 +49,22 @@
     "description": "Proje Dockerfile yardımıyla paketlenecek.",
     "completed": false,
     "createdAt": "2026-10-19T13:07:23.800Z"
+  },
+  {
+    "id": "1792416797842",
+    "title": "Veritabanı Mimarisinin Tasarlanması",
+    "description": "PostgreSQL şemaları ve ilişkiler başarıyla kurgulandı.",
+    "completed": false,
+    "createdAt": "2026-10-19T13:33:17.842Z"
+  },
+  {
+    "id": "1792417066492",
+    "title": "Raporlama Servislerinin Test Edilmesi",
+    "description": "Completed ve pending rapor uçları Postman üzerinden test edildi.",
+    "completed": true,
+    "status": "completed",
+    "priority": "high",
+    "assignee": "Ahmet",
+    "createdAt": "2026-10-19T13:37:46.492Z"
   }
 ]

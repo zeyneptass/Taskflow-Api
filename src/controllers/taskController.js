@@ -152,14 +152,20 @@ const getTaskById = (req, res) => {
 
 const createTask = (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description, status, priority, assignee } = req.body;
     if (!title) {
       return res.status(400).json({
         success: false,
         message: "Görev başlığı zorunludur.",
       });
     }
-    const newTask = taskRepository.createTask({ title, description });
+    const newTask = taskRepository.createTask({
+      title,
+      description,
+      status,
+      priority,
+      assignee,
+    });
     return res.status(201).json({
       success: true,
       message: "Görev başarıyla oluşturuldu.",

@@ -70,7 +70,11 @@ const createTask = (taskData) => {
     id: Date.now().toString(),
     title: taskData.title,
     description: taskData.description || "",
-    completed: false,
+    // Gelen status değerine göre completed durumunu ayarlayalım:
+    completed: taskData.status === "completed" || taskData.completed === true,
+    status: taskData.status || "pending",
+    priority: taskData.priority || "medium",
+    assignee: taskData.assignee || "Unassigned",
     createdAt: new Date().toISOString(),
   };
   tasks.push(newTask);
