@@ -2,7 +2,7 @@ const taskRepository = require("../repositories/taskRepository");
 
 const getAllTasks = (req, res) => {
   try {
-    const { status, sort, priority } = req.query;
+    const { status, sort, priority, assignee } = req.query;
     let tasks = taskRepository.getAllTasks();
 
     // 1. Duruma Göre Filtreleme
@@ -31,7 +31,16 @@ const getAllTasks = (req, res) => {
       );
     }
 
-    // 3. Sıralama
+    // 3. Kullanıcı Bazlı Filtreleme (assignee=Zeynep)
+    if (assignee) {
+      tasks = tasks.filter(
+        (task) =>
+          task.assignee &&
+          task.assignee.toLowerCase() === assignee.toLowerCase(),
+      );
+    }
+
+    // 34. Sıralama
     if (sort) {
       tasks.sort((a, b) => {
         if (a[sort] === undefined || b[sort] === undefined) return 0;
