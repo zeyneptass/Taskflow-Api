@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 # Taskflow-Api
-Software Persona Backend Bitirme Projesi  (Görev ve Proje Yönetim Sistemi API Geliştirme Projesi)# 🚀 Taskflow-API
-Bu bir Software Persona Backend projesidir.
+Software Persona Backend Bitirme Projesi  (Görev ve Proje Yönetim Sistemi API Geliştirme Projesi)#
+
 =======
 # 🚀 Taskflow-API
 
->>>>>>> e6c6e46d05e33b0353fe2ede85bd2a3bf9f12f01
+
 Node.js ve Express.js ile geliştirilmiş; **Clean Code** ve **Katmanlı Mimari (Repository / Controller / Route)** prensiplerine uygun, dosya tabanlı (`JSON`) güvenli veri yönetimi sunan profesyonel bir RESTful Task Management API projesidir.
 
 ---
