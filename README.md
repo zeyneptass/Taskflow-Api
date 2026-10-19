@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # Taskflow-Api
 Software Persona Backend Bitirme Projesi  (Görev ve Proje Yönetim Sistemi API Geliştirme Projesi)# 🚀 Taskflow-API
 Bu bir Software Persona Backend projesidir.
+=======
+# 🚀 Taskflow-API
+
+>>>>>>> e6c6e46d05e33b0353fe2ede85bd2a3bf9f12f01
 Node.js ve Express.js ile geliştirilmiş; **Clean Code** ve **Katmanlı Mimari (Repository / Controller / Route)** prensiplerine uygun, dosya tabanlı (`JSON`) güvenli veri yönetimi sunan profesyonel bir RESTful Task Management API projesidir.
 
 ---
@@ -85,6 +90,7 @@ API uçlarını test etmek ve kendi ortamınıza aktarmak için hazırlanan Post
 
 👉 **[Postman Workspace & Koleksiyonu Görüntüle](https://www.postman.com/zeyneptass-3618409/workspace/taskflow-public-workspace/collection/58924504-4580be99-be39-4c57-b970-ead6795672e7?action=share&creator=58924504)**
 
+<<<<<<< HEAD
 ### 📋 Görev Endpoint'leri
 
 | Metot  | Endpoint         | Açıklama                   |
@@ -119,3 +125,14 @@ GET /api/tasks?status=pending&priority=high&sort=createdAt&page=1&limit=5
 | GET   | `/api/reports/pending`   | Bekleyen görevlerin sayısını ve detay listesini döner        |
 | GET   | `/api/reports/summary`   | Toplam, tamamlanan ve bekleyen görev sayılarını özetler      |
 
+=======
+### Endpoint Listesi
+
+| Metot  | Endpoint     | Açıklama                    |
+| ------ | ------------ | --------------------------- |
+| GET    | `/tasks`     | Tüm görevleri listeler      |
+| GET    | `/tasks/:id` | Belirli bir görevi getirir  |
+| POST   | `/tasks`     | Yeni görev oluşturur        |
+| PUT    | `/tasks/:id` | Mevcut görevi günceller     |
+| DELETE | `/tasks/:id` | Görevi siler                |
+>>>>>>> e6c6e46d05e33b0353fe2ede85bd2a3bf9f12f01
