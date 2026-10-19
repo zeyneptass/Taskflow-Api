@@ -3,6 +3,8 @@ const router = express.Router();
 const taskController = require('../controllers/taskController');
 const { validateTaskData } = require("../middlewares/validation");
 
+router.get("/search", taskController.searchTasks);
+
 // Tüm görevleri al ve yeni görev oluştur
 router
   .route("/")

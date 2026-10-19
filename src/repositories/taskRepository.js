@@ -111,5 +111,22 @@ const deleteTask = (id) => {
   return true;
 };
 
+// Duruma (completed) göre filtreleme
+const filterTasksByStatus = (status) => {
+    const tasks = readData();
+    const isCompleted = status === 'true';
+    return tasks.filter(task => task.completed === isCompleted);
+};
 
-module.exports = { readData, writeData, getAllTasks, getTaskById, createTask, updateTask, deleteTask };
+const searchTasksByKeyword = (keyword) => {
+  const tasks = readData();
+  const lowerKeyword = keyword.toLowerCase();
+  return tasks.filter(
+    (task) =>
+      task.title.toLowerCase().includes(lowerKeyword) ||
+      (task.description &&
+        task.description.toLowerCase().includes(lowerKeyword)),
+  );
+};
+
+module.exports = { readData, writeData, getAllTasks, getTaskById, createTask, updateTask, deleteTask, filterTasksByStatus, searchTasksByKeyword };

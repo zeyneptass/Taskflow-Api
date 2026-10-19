@@ -7,5 +7,26 @@
     "status": "completed",
     "assignee": "Zeynep",
     "createdAt": "2026-10-09T10:00:00.000Z"
+  },
+  {
+    "id": "1792413025366",
+    "title": "Veritabanı Entegrasyonu",
+    "description": "JSON tabanlı yapı kurulacak.",
+    "completed": false,
+    "createdAt": "2026-10-19T12:30:25.366Z"
+  },
+  {
+    "id": "1792413033538",
+    "title": "Validation Middleware Yazımı",
+    "description": "Girdi doğrulama kuralları eklendi ve test edildi.",
+    "completed": false,
+    "createdAt": "2026-10-19T12:30:33.538Z"
+  },
+  {
+    "id": "1792413042213",
+    "title": "Swagger Dokümantasyonu",
+    "description": "API uçları için Swagger entegrasyonu araştırılacak.",
+    "completed": false,
+    "createdAt": "2026-10-19T12:30:42.213Z"
   }
 ]
