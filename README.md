@@ -1,10 +1,6 @@
 
 # Taskflow-Api
-Software Persona Backend Bitirme Projesi  (Görev ve Proje Yönetim Sistemi API Geliştirme Projesi)#
-
-=======
-# 🚀 Taskflow-API
-
+Software Persona Backend Bitirme Projesi  (Görev ve Proje Yönetim Sistemi API Geliştirme Projesi) 
 
 Node.js ve Express.js ile geliştirilmiş; **Clean Code** ve **Katmanlı Mimari (Repository / Controller / Route)** prensiplerine uygun, dosya tabanlı (`JSON`) güvenli veri yönetimi sunan profesyonel bir RESTful Task Management API projesidir.
 
@@ -124,15 +120,3 @@ GET /api/tasks?status=pending&priority=high&sort=createdAt&page=1&limit=5
 | GET   | `/api/reports/completed` | Tamamlanan görevlerin sayısını ve detay listesini döner      |
 | GET   | `/api/reports/pending`   | Bekleyen görevlerin sayısını ve detay listesini döner        |
 | GET   | `/api/reports/summary`   | Toplam, tamamlanan ve bekleyen görev sayılarını özetler      |
-
-=======
-### Endpoint Listesi
-
-| Metot  | Endpoint     | Açıklama                    |
-| ------ | ------------ | --------------------------- |
-| GET    | `/tasks`     | Tüm görevleri listeler      |
-| GET    | `/tasks/:id` | Belirli bir görevi getirir  |
-| POST   | `/tasks`     | Yeni görev oluşturur        |
-| PUT    | `/tasks/:id` | Mevcut görevi günceller     |
-| DELETE | `/tasks/:id` | Görevi siler                |
->>>>>>> e6c6e46d05e33b0353fe2ede85bd2a3bf9f12f01
